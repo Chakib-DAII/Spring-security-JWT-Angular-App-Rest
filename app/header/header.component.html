@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="true"><a routerLink="home">Home</a></li>
+      <li routerLinkActive="true"><a routerLink="userdashboard" *ngIf="currentstatus.status">User</a></li>
+      <li routerLinkActive="true"><a routerLink="admindashboard" *ngIf="currentstatus.status && currentstatus.admin">Admin</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" >
+      <li routerLinkActive="true" *ngIf="!currentstatus.status" >
+        <a routerLink="signup">signup</a>
+      </li>
+      <li routerLinkActive="true" *ngIf="!currentstatus.status">
+        <a routerLink="login" >login</a>
+      </li>
+      <li routerLinkActive="true" *ngIf="currentstatus.status" >
+        <a (click)="logout()" style="cursor: pointer">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

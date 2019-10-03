@@ -1,0 +1,20 @@
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>Role</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users" >
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.phoneNumber}}</td>
+    <td>{{user.role}}</td>
+  </tr>
+  </tbody>
+</table>
